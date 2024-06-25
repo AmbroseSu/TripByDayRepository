@@ -19,7 +19,7 @@
     </parent>
   <groupId>com.ambrose</groupId>
   <artifactId>tripbydayrepository</artifactId>
-  <version>1.0.3</version>
+  <version>1.0.4</version>
   <name>TripByDayRepository</name>
   <description>TripByDayRepository</description>
   <properties>
