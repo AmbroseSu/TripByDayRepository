@@ -12,8 +12,6 @@ jobs:
         with:
           java-version: '17'
           distribution: 'adopt'
-          server-id: github01
-          server-password: ${{ secrets.JAVA_TOKEN }}
       - name: Publish package
         run: mvn --batch-mode deploy
         env:
