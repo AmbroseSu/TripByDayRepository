@@ -19,9 +19,13 @@ public class City {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
   private String name;
+  private Boolean status;
 
   @OneToMany(mappedBy = "city", cascade = CascadeType.ALL)
   private List<Destination> destinations;
+
+
+
 
 
 }

@@ -15,13 +15,13 @@ import lombok.Data;
 @Data
 @Entity
 @Table(name = "tbl_service")
-public class Service {
+public class Servicee {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
   private String name;
   private String description;
-  private Long startDate;
+  private Long startTime;
   private Long endTime;
   private Float price;
   private String category;
@@ -31,7 +31,7 @@ public class Service {
   @JoinColumn(name = "userId")
   private User user;
 
-  @OneToMany(mappedBy = "service", cascade = CascadeType.ALL)
+  @OneToMany(mappedBy = "servicee", cascade = CascadeType.ALL)
   private List<ServiceInPackage> serviceInPackage;
 
   @ManyToOne

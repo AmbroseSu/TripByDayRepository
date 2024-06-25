@@ -19,7 +19,7 @@
     </parent>
   <groupId>com.ambrose</groupId>
   <artifactId>tripbydayrepository</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.2</version>
   <name>TripByDayRepository</name>
   <description>TripByDayRepository</description>
   <properties>
@@ -89,6 +89,7 @@
       <artifactId>spring-security-core</artifactId>
       <version>6.3.0</version>
     </dependency>
+
   </dependencies>
 
 
@@ -97,6 +98,14 @@
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>repackage</id>
+            <configuration>
+              <classifier>exec</classifier>
+            </configuration>
+          </execution>
+        </executions>
         <configuration>
           <excludes>
             <exclude>
@@ -111,7 +120,7 @@
         <artifactId>maven-clean-plugin</artifactId>
         <version>3.1.0</version>
       </plugin>
-      <!-- default lifecycle, jar packaging: see https://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_jar_packaging -->
+
       <plugin>
         <artifactId>maven-resources-plugin</artifactId>
         <version>3.0.2</version>
